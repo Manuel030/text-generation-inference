@@ -101,6 +101,7 @@ class CausalLMBatch(Batch):
             return_token_type_ids=False,
             truncation=True,
             max_length=max_truncation,
+            add_special_tokens=False,
         ).to(device)
 
         input_lengths = tokenized_inputs["attention_mask"].sum(1)
