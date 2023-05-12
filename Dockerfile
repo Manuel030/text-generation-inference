@@ -102,6 +102,7 @@ FROM kernel-builder as transformers-builder
 
 WORKDIR /usr/src
 
+RUN /bin/bash -c echo "foo"
 COPY server/Makefile-transformers Makefile
 
 # Build specific version of transformers
